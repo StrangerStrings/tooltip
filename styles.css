@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-color: rgb(30, 45, 40);
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(77, 10, 77);
+}
+
+.thumbnail {    
+    background: rgb(44, 44, 114);
+    height: 220px;
+    position: relative;
+    width: 250px;
+    margin: 40px 60px;
+    border: 5px solid;
+}
+
+.aside {
+    display: none;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    width: 100%;
+    z-index: 69;
+}
+
+.thumbnail:hover > .aside {
+    display: flex;
+}
+
+.triangle {
+    border-right: rgb(146, 111, 64) solid 40px;
+    border-top: transparent solid 27px;
+    border-bottom: transparent solid 27px;
+}
+
+.info {
+    background-color: rgb(146, 111, 64);
+    padding: 10px 18px;
+    color: rgb(65, 28, 28);
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 8px;
+}
+
+.thumbnail.edge {
+    background: rgb(32, 32, 99);
+}
+
+.edge .aside {
+    flex-direction: row-reverse;
+    left: -100%;
+}
+
+.edge .triangle {
+    border-left: rgb(146, 111, 64) solid 40px;
+    border-right: none;
+
+}
